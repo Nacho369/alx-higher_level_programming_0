@@ -25,7 +25,7 @@ int main(void)
 
     printf("-----------------\n");
 
-    insert_node(&head, 180);
+    insert_node(&head, -180);
 
     print_listint(head);
 
