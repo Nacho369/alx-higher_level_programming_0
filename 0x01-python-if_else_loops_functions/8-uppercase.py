@@ -2,10 +2,9 @@
 
 def uppercase(str):
     for ch in str:
-        char_ord = ord(ch)
+        char_ord = ord(c)
         if (char_ord > 96 and char_ord < 123):
-            char_up = char_ord - 32
-            char_pr = chr(char_up)
+            char_pr = chr(char_ord - 32)
             bools = True
         else:
             bools = False
