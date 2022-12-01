@@ -2,6 +2,7 @@
 
 import sys
 
+
 def main():
     argv = sys.argv
     arg_len = len(argv)
@@ -13,7 +14,6 @@ def main():
         n += 1
 
     print("{}".format(sum_res))
-    
 
 
 if __name__ == '__main__':
