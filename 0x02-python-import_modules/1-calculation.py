@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from calculator_1 import *
+import calculator_1
 
 
 def main():
