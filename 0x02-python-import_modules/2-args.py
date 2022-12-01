@@ -13,11 +13,11 @@ def main():
         print("{} {}".format(args_len - 1, "arguments."))
     elif (args_len == 2):
         print("{} {}".format(args_len - 1, "argument:"))
-    else:
+    elif (args_len > 2):
         print("{} {}".format(args_len - 1, "arguments:"))
 
     while (n < args_len):
-        print("{} : {}".format(n, argv[n]))
+        print("{}: {}".format(n, argv[n]))
         n += 1
 
 
