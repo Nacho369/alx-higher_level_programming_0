@@ -7,5 +7,4 @@ new_element = 9
 new_list = new_in_list(my_list, idx, new_element)
 
 print(new_list)
-
 print(my_list)
