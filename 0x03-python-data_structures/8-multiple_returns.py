@@ -7,7 +7,7 @@ def multiple_returns(sentence):
     str_len = len(sentence)
 
     if sentence == "":
-        new_tuple = (str_len, None)
+        new_tuple = (0, None)
         return (new_tuple)
     
     new_tuple = (str_len, first_char)
