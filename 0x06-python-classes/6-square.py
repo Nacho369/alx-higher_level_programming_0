@@ -10,9 +10,10 @@ class Square:
         Initialize a new square
         Args:
             size(int): Size of square
+            position (int, int): The position of the new square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -27,7 +28,7 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self.__size = value
 
     @property
     def position(self):
