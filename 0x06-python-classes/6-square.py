@@ -53,15 +53,14 @@ class Square:
         """ Prints to the stdout the square with the character "#" """
         if self.__size == 0:
             print("")
-            return
 
-        for e in range(self.__position[1]):
+        for i in range(self.__position[1]):
             print("")
 
         for x in range(self.__size):
-            for a in range(self.__position[0]):
+            for y in range(self.__position[0]):
                 print(" ", end="")
 
-            for y in range(self.__size):
+            for z in range(self.__size):
                 print("#", end="")
             print("")
