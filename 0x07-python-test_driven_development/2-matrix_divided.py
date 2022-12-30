@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
         matrix (list): A list of lists of ints or floats.
         div(int | float): The divisor
 
-    Raise:
+    Raises:
         TypeError: If matrix is not a list of lists of integers or floats,
         TypeError: If each row if the matrix is nkt if the same size
         TypeError: If @div is not a number(integer or float)
