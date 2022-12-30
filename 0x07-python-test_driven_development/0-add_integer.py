@@ -1,6 +1,6 @@
 #!/bin/usr/python3
 
-"""Defines a fumction to add two numbers"""
+"""Defines a function to add two integers"""
 
 
 def add_integer(a, b=98):
@@ -16,6 +16,9 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: If either of a or b is a non-integer and non-float.
+
+    Return:
+        The sum of arg @a and @b
     """
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
