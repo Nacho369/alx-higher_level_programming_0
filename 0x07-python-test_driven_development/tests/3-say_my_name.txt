@@ -37,30 +37,35 @@ A TypeError is raise if first_name or last_name is all type but string
 
 	>>> say_my_name(23, "Nacho")
 	Traceback (most recent call last):
+		...
 	TypeError: first_name must be a string
 
 ::
 
 	>>> say_my_name("Rio", None)
 	Traceback (most recent call last):
+		...
 	TypeError: last_name must be a string
 
 ::
 
 	>>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
     	Traceback (most recent call last):
+		...
  	TypeError: last_name must be a string
 
 ::
 
 	>>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
     	Traceback (most recent call last):
+		...
     	TypeError: first_name must be a string
 
 ::
 
     	>>> say_my_name(None)
     	Traceback (most recent call last):
+		...
     	TypeError: first_name must be a string
 
 At least one argument must be given
@@ -69,4 +74,5 @@ At least one argument must be given
 
 	>>> say_my_name()
 	Traceback (most recent call last):
+		...
 	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
