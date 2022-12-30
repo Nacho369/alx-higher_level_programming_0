@@ -6,11 +6,9 @@ def say_my_name(first_name, last_name=""):
     """
     The function prints "My name is <first name> <last name>" ending with a new
     line
-
     Args:
         first_name(str): First name to be passed
         last_name(str): Last name to be passed
-
     Raises:
         TypeError: If firstname or lastname is not a string
     """
