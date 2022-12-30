@@ -1,7 +1,7 @@
 #!/bin/usr/python3
 
 """
-Defines a fumction that divides all element of a matrix
+Defines a function that divides all element of a matrix
 """
 
 
