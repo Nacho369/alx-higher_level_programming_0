@@ -80,6 +80,7 @@ New lines within a string are printed as normal.
     	new line.
     	<BLANKLINE>
 
+
 A combo example:
 
 ::
@@ -123,8 +124,8 @@ A combo example:
     	<BLANKLINE>
     	Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-Invalid Text
-============
+Invalid Test Cases
+==================
 
 The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
 
