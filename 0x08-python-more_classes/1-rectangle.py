@@ -4,7 +4,7 @@
 
 
 class Rectangle:
-    """Represent a Rectangle class 
+    """Represent a Rectangle class
     """
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
