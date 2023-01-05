@@ -54,14 +54,14 @@ If either argument is a non-integer and non-float, a TypeError is raised.
 
 ::
 
-	>>> add_integer(6, 'test')
+	>>> add_integer(6, "2")
 	Traceback (most recent call last):
 		...
 	TypeError: b must be an integer
 
 ::
 
-	>>> add_integer('new', 'test')
+	>>> add_integer("new", "test")
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
