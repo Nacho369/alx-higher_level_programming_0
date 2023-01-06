@@ -6,8 +6,8 @@ Defines a function that divides all element of a matrix
 
 
 def matrix_divided(matrix, div):
-    """
-    The function divides all element of the matrix and return a new matrix of the divison
+    """The function divides all element of the matrix and return a
+    new matrix of the divison
 
     Args:
         matrix (list): A list of lists of ints or floats.
