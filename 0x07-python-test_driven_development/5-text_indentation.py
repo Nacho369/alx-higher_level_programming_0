@@ -4,7 +4,8 @@
 
 
 def text_indentation(text):
-    """This function prints a text with 2 new lines after each of these characters: ., ? and :
+    """This function prints a text with 2 new lines after each of
+    these characters: ., ? and :
 
     Args:
         text(str): Text to print with 2 new lines after the given characters
