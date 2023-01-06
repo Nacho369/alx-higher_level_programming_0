@@ -2,6 +2,7 @@
 
 """Define a function to print 'My name is <first name> <last name>'"""
 
+
 def say_my_name(first_name, last_name=""):
     """
     The function prints "My name is <first name> <last name>" ending with a new
