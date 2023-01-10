@@ -4,6 +4,7 @@
 
 import json
 
+
 def load_from_json_file(filename):
     """
     The function creates an Object from a “JSON file”
