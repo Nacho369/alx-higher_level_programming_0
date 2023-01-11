@@ -37,10 +37,9 @@ class Student:
             my_dict = self.__dict__
         return (my_dict)
 
-
     def reload_from_json(self, json):
-        '''
+        """
             Replaces all attributes of student instance
-        '''
+        """
         for key, val in json.items():
             self.__setattr__(key, val)
