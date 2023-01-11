@@ -19,7 +19,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs= None):
+    def to_json(self, attrs=None):
         """
         Retrieves a dictionary representation of a Student instance
         """
@@ -27,11 +27,11 @@ class Student:
         if type(attrs) == list:
             for i in attrs:
                 if type(i) != str:
-                        my_dict = self.__dict__
-                        break
+                    my_dict = self.__dict__
+                    break
                 try:
                     my_dict[i] = getattr(self, i)
-                except:
+                except Exception:
                     pass
         else:
             my_dict = self.__dict__
