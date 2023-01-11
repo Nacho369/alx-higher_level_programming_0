@@ -2,11 +2,11 @@
 
 
 def pascal_triangle(n):
-    '''
+    """
         Creates a pascal triangle
         Returns: A matrix containing intergers representing
                  the pascal triangle of n
-    '''
+    """
     matrix = []
     for row in range(n):
         tmp_list = [0] * (row + 1)
