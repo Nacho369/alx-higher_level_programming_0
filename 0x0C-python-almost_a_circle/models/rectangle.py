@@ -9,9 +9,6 @@ class Rectangle(Base):
     """
     Represent a Rectangle class that inherits from a Base class
     """
-    notTypeError = "{} must be an integer".format(__name__)
-    lessThanZeroError = "{} must be > 0".format(__name__)
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
         Args:
@@ -34,6 +31,16 @@ class Rectangle(Base):
 
         super().__init__(id)
 
+    @staticmethod
+    def validate_attr(attr, val):
+        if not isinstance(val, int):
+            raise TypeError("{} must be an integer".format(attr))
+        if attr == "x" or attr == "y":
+            if val < 0:
+                raise ValueError("{} must be >= 0".format(attr))
+        elif val <= 0:
+            raise ValueError("{} must be > 0".format(attr))
+
     @property
     def width(self):
         """Get width of the rectangle"""
@@ -42,11 +49,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, val):
         """Set width of the rectangle"""
-        if not isinstance(val, int):
-            raise TypeError(notTypeError)
-        if val < 0:
-            raise ValueError(lessThanZeroError)
-
+        self.validate_attr("width", val)
         self.__width = val
 
     @property
@@ -57,11 +60,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, val):
         """Set height of rectangle"""
-        if not isinstance(val, int):
-            raise TypeError(notTypeError)
-        if val < 0:
-            raise ValueError(lessThanZeroError)
-
+        self.validate_attr("height", val)
         self.__height = val
 
     @property
@@ -72,11 +71,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, val):
         """Set x of the rectangle"""
-        if not isinstance(val, int):
-            raise TypeError(notTypeError)
-        if val < 0:
-            raise ValueError(lessThanZeroError)
-
+        self.validate_attr("x", val)
         self.__x = val
 
     @property
@@ -87,7 +82,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, val):
         """Set y of the rectangle"""
-        if not isinstance(val, int):
-            raise TypeError(notTypeError)
-        if val < 0:
-            raise ValueError(lessThanZeroError)
+        self.validate_attr("y", val)
+        self.__y = val
