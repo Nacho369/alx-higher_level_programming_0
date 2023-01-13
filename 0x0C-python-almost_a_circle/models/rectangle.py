@@ -97,4 +97,16 @@ class Rectangle(Base):
         self.__y = val
 
     def area(self):
+        """
+        The function returns the area value of the Rectangle instance.
+        """
         return (self.__width * self.__height)
+
+    def display(self):
+        """The function prints in stdout the Rectangle instance
+        with the character `#`"""
+
+        for row in range(self.__height):
+            for col in range(self.width):
+                    print("#", end="")
+            print("")
