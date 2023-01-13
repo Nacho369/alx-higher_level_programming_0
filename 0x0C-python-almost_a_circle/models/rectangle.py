@@ -33,6 +33,17 @@ class Rectangle(Base):
 
     @staticmethod
     def validate_attr(attr, val):
+        """
+        Validate the setter methods based on the attr and val given
+
+        Raise:
+            TypeError: If val is not an int
+            ValueError: If val is less than Zero
+
+        Args:
+            attr: Attribute to be passed
+            val: Value to be passed
+        """
         if not isinstance(val, int):
             raise TypeError("{} must be an integer".format(attr))
         if attr == "x" or attr == "y":
@@ -84,3 +95,6 @@ class Rectangle(Base):
         """Set y of the rectangle"""
         self.validate_attr("y", val)
         self.__y = val
+
+    def area(self):
+        return (self.__width * self.__height)
