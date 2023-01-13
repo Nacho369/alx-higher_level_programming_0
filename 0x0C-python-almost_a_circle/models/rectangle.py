@@ -108,5 +108,11 @@ class Rectangle(Base):
 
         for row in range(self.__height):
             for col in range(self.width):
-                    print("#", end="")
+                print("#", end="")
             print("")
+
+    def __str__(self):
+        """Prints a string to the stdout"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
