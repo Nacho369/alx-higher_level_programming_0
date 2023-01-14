@@ -17,3 +17,14 @@ class Square(Rectangle):
         """Overwritting the ste method"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
+
+    @property
+    def size(self):
+        """Get the size of the square"""
+        return (self.width)
+
+    @size.setter
+    def size(self, value):
+        """Set the size of the square"""
+        self.width = value
+        self.height = value
