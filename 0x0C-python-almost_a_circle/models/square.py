@@ -14,7 +14,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Overwritting the ste method"""
+        """Overwritting the str method"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
 
@@ -28,3 +28,26 @@ class Square(Rectangle):
         """Set the size of the square"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """
+        Update the class Square to assign attributes
+
+        Args:
+            1st argument should be the id attribute
+            2nd argument should be the size attribute
+            3rd argument should be the x attribute
+            4th argument should be the y attribute
+        """
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
+
+        if not args or len(args) == 0:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+            return 
