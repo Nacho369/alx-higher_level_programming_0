@@ -50,4 +50,4 @@ class Square(Rectangle):
         if not args or len(args) == 0:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
-            return 
+            return
