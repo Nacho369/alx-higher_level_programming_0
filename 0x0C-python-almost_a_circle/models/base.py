@@ -20,6 +20,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         This function returns the JSON string representation of
@@ -36,3 +37,26 @@ class Base:
             return ("[]")
         else:
             return (json.dumps(list_dictionaries))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        This function writes the JSON string representation of list_objs
+        to a file
+
+        Args:
+            list_objs: Is a list of instances who inherits of Base
+        """
+        filename = cls.__name__ + ".json"
+        content = []
+
+        with open(filename, "w") as file_w:
+            if list_objs is None:
+                jsonfile.write("[]")
+            else:
+                for item in list_objs:
+                    item = item.to_dictionary()
+                    json_dict = json.loads(cls.to_json_string(item))
+                    content.append(json_dict)
+
+            json.dump(content, file_w)
