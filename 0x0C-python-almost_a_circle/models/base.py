@@ -77,3 +77,25 @@ class Base:
                     content.append(json_dict)
 
             json.dump(content, file_w)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        The function returns an instance with all attributes already set
+
+        Args:
+            dictionary: Can be thought of as a double pointer to a
+                        dictionary
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls.__name__ == "Rectangle":
+            r1 = Rectangle(4, 6, 8, 2, 1)
+
+        if cls.__name__ == "Square":
+            r1 = Square(2, 8, 1)
+
+        r1.update(**dictionary)
+
+        return (r1)
