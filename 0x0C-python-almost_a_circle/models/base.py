@@ -79,6 +79,27 @@ class Base:
             json.dump(content, file_w)
 
     @classmethod
+    def load_from_file(cls):
+        """
+        The function returns a list of instances
+        """
+        file_name = cls.__name__ + ".json"
+
+        try:
+            with open(file_name, encoding="UTF8") as fd:
+                content = cls.from_json_string(fd.read())
+        except:
+            return []
+
+        instances = []
+
+        for instance in content:
+            tmp = cls.create(**instance)
+            instances.append(tmp)
+
+        return instances
+
+    @classmethod
     def create(cls, **dictionary):
         """
         The function returns an instance with all attributes already set
