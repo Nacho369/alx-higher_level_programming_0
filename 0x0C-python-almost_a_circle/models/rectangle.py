@@ -49,8 +49,9 @@ class Rectangle(Base):
         if attr == "x" or attr == "y":
             if val < 0:
                 raise ValueError("{} must be >= 0".format(attr))
-        elif val <= 0:
-            raise ValueError("{} must be > 0".format(attr))
+        if attr == "width" or attr == "height":
+            if val <= 0:
+                raise ValueError("{} must be > 0".format(attr))
 
     @property
     def width(self):
